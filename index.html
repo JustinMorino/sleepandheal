@@ -3,26 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Listen On</title>
+<title>Choose Your Platform</title>
 <style>
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #f8f8f8;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* zentriert vertikal */
-    align-items: center;
+    justify-content: center; /* vertikal zentriert */
+    align-items: center;     /* horizontal zentriert */
     min-height: 100vh;
     margin: 0;
-    padding: 10px 20px; /* weniger oben/unten */
+    padding: 0;
     color: #333;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1 {
-    font-weight: 500;
-    margin: 0 0 30px 0; /* weniger Abstand unter der Überschrift */
-    text-align: center;
-    font-size: 1.8rem;
+    font-weight: 600; /* leicht dicker */
+    margin: 15px 0 25px 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.3px; /* wirkt edler */
+  }
+
+  .cover {
+    max-width: 200px; /* kleineres Bild */
+    width: 70%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    display: block;
   }
 
   .button {
@@ -30,12 +45,12 @@
     align-items: center;
     justify-content: center;
     width: 90%;
-    max-width: 360px;
-    padding: 18px 25px;
-    margin: 15px 0;
+    max-width: 300px;
+    padding: 14px 20px;
+    margin: 10px 0;
     border-radius: 14px;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: all 0.2s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
@@ -53,10 +68,10 @@
   }
 
   .spotify img {
-    margin-right: 15px;
-    filter: brightness(0); /* schwarzes Logo */
-    height: 28px;
-    width: auto; /* proportional */
+    margin-right: 10px;
+    filter: brightness(0);
+    height: 22px;
+    width: auto;
   }
 
   /* Apple Music Button */
@@ -66,29 +81,33 @@
   }
 
   .apple img {
-    margin-right: 15px;
-    filter: brightness(0) invert(1); /* weißes Logo */
-    height: 28px;
-    width: auto; /* proportional */
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+    height: 22px;
+    width: auto;
   }
-
 </style>
 </head>
 <body>
 
-<h1>listen on:</h1>
+<div class="wrapper">
+  <!-- Cover Bild -->
+  <img src="https://s1.directupload.eu/images/250926/zh7fplpq.jpg" alt="Cover" class="cover">
 
-<!-- Spotify Button -->
-<a href="https://open.spotify.com/playlist/0Yh0lv2J4rPWA9DU4WXvhZ" class="button spotify" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
-  Spotify
-</a>
+  <h1>listen on:</h1>
 
-<!-- Apple Music Button -->
-<a href="https://music.apple.com/de/playlist/sleep-heal/pl.u-55D6XP3F6MyAqRX" class="button apple" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
-  Apple Music
-</a>
+  <!-- Spotify Button -->
+  <a href="https://open.spotify.com/playlist/0Yh0lv2J4rPWA9DU4WXvhZ" class="button spotify" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+    Spotify
+  </a>
+
+  <!-- Apple Music Button -->
+  <a href="https://music.apple.com/de/playlist/sleep-heal/pl.u-55D6XP3F6MyAqRX" class="button apple" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+    Apple Music
+  </a>
+</div>
 
 </body>
 </html>
