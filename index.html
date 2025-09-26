@@ -7,14 +7,14 @@
 <style>
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #b0b0b0; /* dunkleres, professionelles Grau */
+    background: linear-gradient(to bottom, #1c1c1c, #141414);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #f1f1f1;
     text-align: center;
   }
 
@@ -31,15 +31,16 @@
   h1 {
     font-weight: 600;
     margin: 15px 0 25px 0;
-    font-size: 1.5rem;
-    letter-spacing: 0.3px;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    color: #f1f1f1;
   }
 
   .cover {
     width: 160px;
-    border-radius: 18px;
+    border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 0 12px rgba(255,255,255,0.05);
     display: block;
   }
 
@@ -55,37 +56,36 @@
     font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     box-sizing: border-box;
   }
 
-  .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  .button:active {
+    transform: scale(0.97);
   }
 
   /* Spotify Button */
   .spotify {
-    background-color: #1DB954;
+    background: linear-gradient(145deg, #1DB954, #1ed760);
     color: #fff;
   }
 
   .spotify img {
     margin-right: 14px;
-    filter: brightness(0);
+    filter: brightness(0) invert(1);
     height: 26px;
     width: auto;
   }
 
   /* Apple Music Button */
   .apple {
-    background-color: #000;
+    background: linear-gradient(135deg, #ff375f, #ff2d55); /* kräftiges Rot wie Apple Music */
     color: #fff;
   }
 
   .apple img {
     margin-right: 14px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* Weißes Logo */
     height: 26px;
     width: auto;
   }
