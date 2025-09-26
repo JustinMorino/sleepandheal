@@ -1,74 +1,94 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musik-Links</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #121212;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Your Platform</title>
+<style>
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
 
-    h1 {
-      margin-bottom: 40px;
-      font-size: 24px;
-    }
+  h1 {
+    font-weight: 500;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
 
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      max-width: 350px;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      transition: transform 0.2s;
-    }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 360px;
+    padding: 18px 25px;
+    margin: 15px 0;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  }
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  }
 
-    .apple {
-      background-color: #000;
-    }
+  /* Spotify Button */
+  .spotify {
+    background-color: #1DB954;
+    color: #fff;
+  }
 
-    .spotify {
-      background-color: #1DB954;
-    }
+  .spotify img {
+    margin-right: 15px;
+    filter: brightness(0); /* schwarzes Logo */
+    height: 28px;
+    width: auto; /* proportional */
+  }
 
-    .btn img {
-      height: 30px;
-      margin-right: 15px;
-    }
-  </style>
+  /* Apple Music Button */
+  .apple {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .apple img {
+    margin-right: 15px;
+    filter: brightness(0) invert(1); /* weißes Logo */
+    height: 28px;
+    width: auto; /* proportional */
+  }
+
+</style>
 </head>
 <body>
-  <h1>choose your platform:</h1>
-  
-  <a href="https://music.apple.com/de/playlist/sleep-heal/pl.u-55D6XP3F6MyAqRX" class="btn apple" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music Logo">
-    Apple Music
-  </a>
-  
-  <a href="https://open.spotify.com/playlist/0Yh0lv2J4rPWA9DU4WXvhZ" class="btn spotify" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
-    Spotify
-  </a>
+
+<h1>open in:</h1>
+
+<!-- Spotify Button -->
+<a href="https://open.spotify.com/playlist/0Yh0lv2J4rPWA9DU4WXvhZ" class="button spotify" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+  Spotify
+</a>
+
+<!-- Apple Music Button -->
+<a href="https://music.apple.com/de/playlist/sleep-heal/pl.u-55D6XP3F6MyAqRX" class="button apple" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+  Apple Music
+</a>
+
 </body>
 </html>
