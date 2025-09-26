@@ -9,8 +9,8 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #f8f8f8;
     display: flex;
-    justify-content: center; /* vertikal zentriert */
-    align-items: center;     /* horizontal zentriert */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -22,20 +22,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 420px;   /* leicht größer für Mobile */
+    padding: 0 16px;    /* schmale Ränder links/rechts */
+    box-sizing: border-box;
   }
 
   h1 {
-    font-weight: 600; /* leicht dicker */
+    font-weight: 600;   /* leicht dickere Schrift */
     margin: 15px 0 25px 0;
     font-size: 1.5rem;
-    letter-spacing: 0.3px; /* wirkt edler */
+    letter-spacing: 0.3px;
   }
 
   .cover {
-    max-width: 200px; /* kleineres Bild */
-    width: 70%;
-    border-radius: 20px;
-    margin-bottom: 15px;
+    width: 160px;       /* kleines, zentriertes Cover */
+    border-radius: 18px;
+    margin-bottom: 20px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     display: block;
   }
@@ -44,16 +47,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    max-width: 300px;
-    padding: 14px 20px;
-    margin: 10px 0;
-    border-radius: 14px;
+    width: 100%;        /* volle Breite im Wrapper */
+    padding: 20px;      /* groß genug für Finger */
+    margin: 12px 0;
+    border-radius: 16px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.2s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    box-sizing: border-box;
   }
 
   .button:hover {
@@ -68,9 +71,9 @@
   }
 
   .spotify img {
-    margin-right: 10px;
+    margin-right: 14px;
     filter: brightness(0);
-    height: 22px;
+    height: 26px;
     width: auto;
   }
 
@@ -81,9 +84,9 @@
   }
 
   .apple img {
-    margin-right: 10px;
+    margin-right: 14px;
     filter: brightness(0) invert(1);
-    height: 22px;
+    height: 26px;
     width: auto;
   }
 </style>
