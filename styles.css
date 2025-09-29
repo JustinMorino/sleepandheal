@@ -1,0 +1,33 @@
+/* --------------------
+   Cover: sanftes Vergrößern
+-------------------- */
+.cover {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.55), 0 0 18px rgba(255,255,255,0.03) inset;
+  animation: slow-zoom 10s ease-in-out forwards;
+}
+
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); } /* nur leicht vergrößern */
+}
+
+/* --------------------
+   Spotify Button: dezentes Aufleuchten nach 10s, 2x
+-------------------- */
+@keyframes spotify-glow {
+  0%   { box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+  20%  { box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 8px 2px rgba(255,255,255,0.4); }
+  40%  { box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+  60%  { box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 8px 2px rgba(255,255,255,0.4); }
+  80%  { box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+  100% { box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+}
+
+.spotify {
+  /* andere Styles wie Hintergrund etc. bleiben bestehen */
+  animation: spotify-glow 1s ease-in-out 10s forwards; /* Delay 10s */
+}
